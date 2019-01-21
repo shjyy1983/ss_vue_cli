@@ -1,2 +1,6 @@
+
+安装
+vue init shjyy1983/ss_vue_cli demo1
+
 [参考]
 https://github.com/jamielhf/webpack/tree/template1

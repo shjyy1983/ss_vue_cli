@@ -1,17 +1,27 @@
-import Vue from 'vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-import Router from 'vue-router'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import Vue from 'vue'
+import Router from 'vue-router'
 
-const IndexPage = (resolve)=>{require(['../page/IndexPage.vue'], resolve)};
+Vue.use(Router)
 
-
-Vue.use(Router){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+const Home = r => require.ensure([], () => r(require('@views/home')), 'home')
+const Login = r => require.ensure([], () => r(require('@views/login')), 'login')
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Index',
-      component: IndexPage{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-    }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-  ]{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-}){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+      name: '/',
+      component: Home
+    },
+    {
+      path: '/home',
+      name: 'home',
+      component: Home
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login
+    }
+  ]
+})

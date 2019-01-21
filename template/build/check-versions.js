@@ -1,8 +1,15 @@
+/*
+ * @Author: SHJ
+ * @Date: 2018-06-22 10:24:00
+ * @Last Modified by: SHJ
+ * @Last Modified time: 2018-11-27 15:10:54
+ */
 'use strict'
 const chalk = require('chalk')
 const semver = require('semver')
 const packageConfig = require('../package.json')
 const shell = require('shelljs')
+
 function exec (cmd) {
   return require('child_process').execSync(cmd).toString().trim()
 }
@@ -25,8 +32,10 @@ if (shell.which('npm')) {
 
 module.exports = function () {
   const warnings = []
+
   for (let i = 0; i < versionRequirements.length; i++) {
     const mod = versionRequirements[i]
+
     if (!semver.satisfies(mod.currentVersion, mod.versionRequirement)) {
       warnings.push(mod.name + ': ' +
         chalk.red(mod.currentVersion) + ' should be ' +
@@ -39,10 +48,12 @@ module.exports = function () {
     console.log('')
     console.log(chalk.yellow('To use this template, you must update following to modules:'))
     console.log()
+
     for (let i = 0; i < warnings.length; i++) {
       const warning = warnings[i]
       console.log('  ' + warning)
     }
+
     console.log()
     process.exit(1)
   }

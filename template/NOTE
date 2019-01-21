@@ -1,0 +1,57 @@
+webpack 4.x
+
+
+[更新包]
+使用工具 npm-check-updates (https://www.npmjs.com/package/npm-check-updates)
+安装
+npm install -g npm-check-updates
+在项目目录下，使用 ncu -u，然后 yarn 更新
+
+
+
+[问题]
+1. vue-loader was used without the corresponding plugin.
+参考：
+https://vue-loader.vuejs.org/migrating.html#notable-breaking-changes
+
+解决：
+增加插件
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
+plugins: [
+  new VueLoaderPlugin()
+]
+
+2. extract-text-webpack-plugin 不支持 webpack4.x
+参考
+https://segmentfault.com/q/1010000013564212
+
+解决：
+使用 4.0 beta 版，npm install --save-dev extract-text-webpack-plugin@next
+
+3. process.env 的使用
+npm run build --some=abc
+那么获取通过 process.env.npm_config_some
+
+4. The 'mode' option has not been set, webpack will fallback to 'production' for this value.
+参考：
+https://webpack.js.org/concepts/mode/
+
+
+
+
+[插件]
+compression-webpack-plugin
+https://github.com/webpack-contrib/compression-webpack-plugin
+
+mini-css-extract-plugin
+https://github.com/webpack-contrib/mini-css-extract-plugin
+
+
+
+[参考]
+process.env 问题
+https://vue-loader-v14.vuejs.org/en/workflow/production.html
+
+eslint 文档
+https://cn.eslint.org/docs/user-guide/configuring
+https://github.com/standard/standard/blob/master/docs/RULES-zhcn.md
