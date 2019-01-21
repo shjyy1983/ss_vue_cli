@@ -1,5 +1,5 @@
 {
-  "name": "wp3x_vue_basic",
+  "name": "{{ name }}",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "SHJ",
