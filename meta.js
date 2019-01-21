@@ -24,69 +24,6 @@ module.exports = {
     "author": {
       "type": "string",
       "message": "Author"
-    },
-    "build": {
-      "type": "list",
-      "message": "Vue build",
-      "choices": [
-        {
-          "name": "Runtime + Compiler: recommended for most users",
-          "value": "standalone",
-          "short": "standalone"
-        },
-        {
-          "name": "Runtime-only: about 6KB lighter min+gzip, but templates (or any Vue-specific HTML) are ONLY allowed in .vue files - render functions are required elsewhere",
-          "value": "runtime",
-          "short": "runtime"
-        }
-      ]
-    },
-    "router": {
-      "type": "confirm",
-      "message": "Install vue-router?"
-    },
-    "vuex":{
-      "type": "confirm",
-      "message": "Install vuex?"
-    },
-    "isMobile":{
-        "type": "confirm",
-        "message": "is Mobile project?"
-    },
-
-    "lint": {
-      "type": "confirm",
-      "message": "Use ESLint to lint your code?"
-    },
-    "lintConfig": {
-      "when": "lint",
-      "type": "list",
-      "message": "Pick an ESLint preset",
-      "choices": [
-        {
-          "name": "Standard (https://github.com/standard/standard)",
-          "value": "standard",
-          "short": "Standard"
-        },
-        {
-          "name": "Airbnb (https://github.com/airbnb/javascript)",
-          "value": "airbnb",
-          "short": "Airbnb"
-        },
-        {
-          "name": "none (configure it yourself)",
-          "value": "none",
-          "short": "none"
-        }
-      ]
-    },
-    "unit": {
-      "type": "confirm",
-      "message": "Setup unit tests with Karma + Mocha?"
-    },
-    "e2e": {
-      "type": "confirm",
-      "message": "Setup e2e tests with Nightwatch?"
     }
   },
   "filters": {
