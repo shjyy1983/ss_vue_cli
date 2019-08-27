@@ -25,7 +25,11 @@ module.exports = {
       "type": "string",
       "message": "作者",
       "default": "SHEN"
-    }
+    },
+    "router": {
+      "type": "confirm",
+      "message": "安装 vue-router?"
+    },
   },
   "filters": {
   },
