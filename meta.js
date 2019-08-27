@@ -24,6 +24,10 @@ module.exports = {
     "author": {
       "type": "string",
       "message": "Author"
+    },
+    "其他信息": {
+      "type": "string",
+      "message": "hello"
     }
   },
   "filters": {
