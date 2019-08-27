@@ -10,24 +10,25 @@ module.exports = {
     }
   },
   "prompts": {
-    "name": {
+    "项目名字": {
       "type": "string",
       "required": true,
       "message": "Project name"
     },
-    "description": {
+    "描述": {
       "type": "string",
       "required": false,
       "message": "Project description",
       "default": "A Vue.js project"
     },
-    "author": {
+    "作者": {
       "type": "string",
       "message": "Author"
     },
     "其他信息": {
       "type": "string",
-      "message": "hello"
+      "message": "其他信息",
+      "default": "hello"
     }
   },
   "filters": {
