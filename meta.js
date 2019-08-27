@@ -26,12 +26,14 @@ module.exports = {
       "message": "作者",
       "default": "SHEN"
     },
-    "router": {
+    "demo": {
       "type": "confirm",
-      "message": "安装 vue-router?"
+      "message": "包含demo?"
     },
+
   },
   "filters": {
+    "router/template_bk/**/*": "demo"
   },
   "completeMessage": "To get started:\n\n  {{^inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm install\n  npm run dev\n\nDocumentation can be found at https://vuejs-templates.github.io/webpack"
 };

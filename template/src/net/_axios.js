@@ -1,8 +1,8 @@
 /*
  * @Author: SHJ
  * @Date: 2018-06-22 14:53:57
- * @Last Modified by: SHJ
- * @Last Modified time: 2018-11-27 16:00:18
+ * @Last Modified by: SHEN
+ * @Last Modified time: 2019-08-27 19:06:59
  */
 /**
  * 安卓4.4.3一下的手机还是不支持Promise的,需要引入npm install babel-polyfill和npm install babel-runtime，在入口文件上加上即可
