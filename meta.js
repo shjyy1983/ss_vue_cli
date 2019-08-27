@@ -26,14 +26,14 @@ module.exports = {
       "message": "作者",
       "default": "SHEN"
     },
-    "demo": {
+    "vuex": {
       "type": "confirm",
-      "message": "包含demo?"
+      "message": "包含 vuex?"
     },
 
   },
   "filters": {
-    "template/NOTE": "demo"
+    "src/store/**/*": "vuex"
   },
   "completeMessage": "To get started:\n\n  {{^inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm install\n  npm run dev\n\nDocumentation can be found at https://vuejs-templates.github.io/webpack"
 };
