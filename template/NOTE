@@ -7,7 +7,9 @@ webpack 4.x
 npm install -g npm-check-updates
 在项目目录下，使用 ncu -u，然后 yarn 更新
 
-
+{{#vuex}}
+hello
+{{/vuex}}
 
 [问题]
 1. vue-loader was used without the corresponding plugin.
